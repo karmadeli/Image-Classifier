@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imageUserPicked = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageVIew.image = imageUserPicked
-            guard let ciimage = CIImage(image: imageUserPicked) else{fatalError("ERROR could convert to cimage")}
+            guard let ciimage = CIImage(image: imageUserPicked) else{fatalError("ERROR could convert to CIImage")}
             
             detect(image: ciimage)
         }
@@ -38,21 +38,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let model = try VNCoreMLModel(for: Inceptionv3().model)
             let request = VNCoreMLRequest(model: model) { (request, error) in
 //VNClassificationObservation: hold classifaction observations and possible matches
-                guard let results = request.results as? [VNClassificationObservation] else{fatalError("model failled to process image")}
+                guard let results = request.results as? [VNClassificationObservation] else{fatalError("model failed to process image")}
  
                 if let firstResult = results.first{
                     print("\(String(describing: results.first?.confidence))")
  
-                    let con = results.first!.confidence*100
+                    guard let bestGuess = results.first else{return
+                    }
+                    let confidence = bestGuess.confidence*100
                     let bestResults = firstResult.identifier
                  
-                 var i = bestResults.split(separator: ",")
+                 var results = bestResults.split(separator: ",")
                     
-                    self.confidence.text = "\(Int(con))%"
+                    self.confidence.text = "\(Int(confidence))%"
                     
-                    if i.count > 1{
-                        self.AIReturn.text = "\(String(i[0].capitalized)) or maybe a(n)\(String(i[1]))."}
-                    else{self.AIReturn.text = "\(String(i[0].capitalized))"}
+                    if results.count > 1{
+                        self.AIReturn.text = "\(String(results[0].capitalized)) or maybe a(n)\(String(results[1]))."}
+                    else{self.AIReturn.text = "\(String(results[0].capitalized))"}
                     
                     self.instructions.isHidden = true
                     
