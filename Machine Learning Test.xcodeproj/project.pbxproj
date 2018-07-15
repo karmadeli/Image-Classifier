@@ -13,7 +13,6 @@
 		1F20F1391FB7982F00CB4BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F20F1381FB7982F00CB4BA5 /* Assets.xcassets */; };
 		1F20F13C1FB7982F00CB4BA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F20F13A1FB7982F00CB4BA5 /* LaunchScreen.storyboard */; };
 		1F20F1441FB79BDE00CB4BA5 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F20F1431FB79BDE00CB4BA5 /* Inceptionv3.mlmodel */; };
-		1F8DD2FC1FD4727E00A4A274 /* FullScreenCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8DD2FB1FD4727E00A4A274 /* FullScreenCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		1F20F13B1FB7982F00CB4BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F20F13D1FB7982F00CB4BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F20F1431FB79BDE00CB4BA5 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
-		1F8DD2FB1FD4727E00A4A274 /* FullScreenCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				1F20F1331FB7982F00CB4BA5 /* ViewController.swift */,
 				1F20F1431FB79BDE00CB4BA5 /* Inceptionv3.mlmodel */,
 				1F20F1351FB7982F00CB4BA5 /* Main.storyboard */,
-				1F8DD2FB1FD4727E00A4A274 /* FullScreenCameraViewController.swift */,
 				1F20F1381FB7982F00CB4BA5 /* Assets.xcassets */,
 				1F20F13A1FB7982F00CB4BA5 /* LaunchScreen.storyboard */,
 				1F20F13D1FB7982F00CB4BA5 /* Info.plist */,
@@ -97,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "KarmaDeli Works";
 				TargetAttributes = {
 					1F20F12D1FB7982F00CB4BA5 = {
@@ -144,7 +141,6 @@
 			files = (
 				1F20F1341FB7982F00CB4BA5 /* ViewController.swift in Sources */,
 				1F20F1441FB79BDE00CB4BA5 /* Inceptionv3.mlmodel in Sources */,
-				1F8DD2FC1FD4727E00A4A274 /* FullScreenCameraViewController.swift in Sources */,
 				1F20F1321FB7982F00CB4BA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +181,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -192,6 +189,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -242,6 +240,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -249,6 +248,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -13,8 +13,8 @@ class FullScreenCameraViewController: UIImagePickerController, UIImagePickerCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         
         
-        if let y = info[UIImagePickerControllerOriginalImage] as? UIImage{
-        FullSreenCamera.image = y
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        FullSreenCamera.image = image
         }
     }
 
@@ -22,22 +22,15 @@ class FullScreenCameraViewController: UIImagePickerController, UIImagePickerCont
     
     override func viewWillAppear(_ animated: Bool) {
          self.sourceType = .camera
-        
-        
+ 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
-       
-
+  
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
 
     
     
